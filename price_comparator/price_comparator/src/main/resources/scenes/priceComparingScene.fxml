@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PriceComparatorController">
+   <children>
+      <VBox layoutX="27.0" layoutY="14.0" spacing="10.0">
+         <children>
+            <HBox layoutX="285.0" layoutY="14.0">
+               <children>
+                  <Label layoutX="284.0" layoutY="19.0" prefHeight="26.0" prefWidth="552.0" text="Список не существующих медикаментов в эталоне" />
+                  <Button fx:id="btnShowUnregisteredDrugs" layoutX="588.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickShowUnregisteredDrugs" prefHeight="26.0" prefWidth="194.0" text="Просмотр" />
+               </children>
+            </HBox>
+            <TableView fx:id="comparedDrugsTable" layoutX="27.0" layoutY="44.0" prefHeight="633.0" prefWidth="747.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

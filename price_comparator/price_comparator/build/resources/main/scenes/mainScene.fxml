@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainSceneController">
+    <children>
+          <HBox layoutX="23.0" layoutY="122.0" prefHeight="26.0" prefWidth="554.0" spacing="5.0" AnchorPane.bottomAnchor="352.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="122.0">
+              <children>
+                  <Label fx:id="lblFileUpload" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="311.0" />
+                  <Button fx:id="btnUpload" mnemonicParsing="false" onAction="#uploadFileEvent" prefHeight="26.0" prefWidth="105.0" text="Загрузить" />
+                  <Button fx:id="btnDeleteFile" mnemonicParsing="false" onAction="#deleteUploadedFileEvent" prefHeight="26.0" prefWidth="127.0" text="Удалить" />
+              </children>
+          </HBox>
+          <HBox layoutX="29.0" layoutY="42.0" AnchorPane.bottomAnchor="432.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="42.0">
+              <children>
+                  <Label prefHeight="26.0" prefWidth="311.0" text="Показать список номеклатур" />
+                  <Button fx:id="btnOpenEtalonScene" mnemonicParsing="false" onAction="#openEtalonScene" prefHeight="26.0" prefWidth="234.0" text="Открыть" />
+              </children>
+          </HBox>
+          <MenuBar prefHeight="29.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <menus>
+                  <Menu mnemonicParsing="false" text="Меню">
+                      <items>
+                          <MenuItem fx:id="mnPercentConfig" mnemonicParsing="false" onAction="#openPercentConfigScene" text="Настройка точности" />
+                  <MenuItem fx:id="mnUnregisteredScene" mnemonicParsing="false" onAction="#openUnregisteredScene" text="Незарегистрированная номенклатура" />
+                      </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Справка">
+                      <items>
+                          <MenuItem mnemonicParsing="false" text="О программе" />
+                      </items>
+                  </Menu>
+              </menus>
+          </MenuBar>
+          <HBox layoutX="29.0" layoutY="79.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="543.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="28.0">
+              <children>
+                  <Label prefHeight="26.0" prefWidth="311.0" text="Шаблон для загрузки данных" />
+                  <Button fx:id="btnOpenPriceListScene" mnemonicParsing="false" onAction="#openPriceListScene" prefHeight="26.0" prefWidth="238.0" text="Открыть" />
+              </children>
+          </HBox>
+      <VBox layoutX="23.0" layoutY="161.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="161.0">
+         <children>
+                <TableView fx:id="tblUploadFiles" layoutX="23.0" layoutY="161.0" prefHeight="285.0" prefWidth="554.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="161.0">
+                    <columns>
+                        <TableColumn fx:id="colNumber" prefWidth="75.0" text="№" />
+                        <TableColumn fx:id="colFileName" prefWidth="300.0" text="Название файла" />
+                        <TableColumn fx:id="colCheck" prefWidth="177" text="Выберите">
+                     <graphic>
+                        <CheckBox fx:id="chbAll" mnemonicParsing="false" onAction="#onClickCheckAll"/>
+                     </graphic></TableColumn>
+                    </columns>
+                </TableView>
+                <Button layoutX="23.0" layoutY="457.0" mnemonicParsing="false" onAction="#showComparedDrugsEvent" prefHeight="29.0" prefWidth="554.0" text="Показать разницу цен" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="457.0" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

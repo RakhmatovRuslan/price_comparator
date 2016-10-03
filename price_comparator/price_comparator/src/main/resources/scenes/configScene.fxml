@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import util.NumberTextField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfigParametersController">
+   <children>
+      <Pane layoutX="-17.0" layoutY="-86.0" prefHeight="100.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="23.0" layoutY="19.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="183.0" text="Процент схожества" />
+                  <NumberTextField fx:id="tfAllowedDiffPercentage" prefHeight="26.0" prefWidth="122.0" />
+                  <Label prefHeight="26.0" prefWidth="16.0" text="\%" />
+               </children>
+            </HBox>
+            <HBox layoutX="27.0" layoutY="60.0">
+               <children>
+                  <Label fx:id="lbInvPercent" prefHeight="26.0" prefWidth="176.0" />
+                  <Button fx:id="btnSavePercent" mnemonicParsing="false" prefHeight="26.0" prefWidth="122.0" text="Сохранить" onAction="#onClickAddProperty"/>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
